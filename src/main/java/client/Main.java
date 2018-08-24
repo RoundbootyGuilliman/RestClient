@@ -23,7 +23,7 @@ public class Main {
 
 
 		//Create book
-		Book dune = new Book(3, "Catcher in the rye", true);;
+		Book dune = new Book(3, "Catcher in the rye");;
 		System.out.println(dune);
 
 		Response response = client.target(uri).request().post(Entity.entity(jsonb.toJson(dune), MediaType.APPLICATION_JSON));
@@ -36,5 +36,6 @@ public class Main {
 		book2.setTitle("EDITED");
 		Response response2 = client.target(uri).request().put(Entity.entity(jsonb.toJson(book2), MediaType.APPLICATION_JSON));
 		System.out.println(response2.getStatusInfo() + " " + response2.getLocation());
+		
 	}
 }

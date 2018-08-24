@@ -1,19 +1,16 @@
 package client;
 
-
 public class Book {
 	
 	private int id;
 	private String title;
-	private boolean pictures;
 	
 	public Book() {
 	}
 	
-	public Book(int id, String title, boolean pictures) {
+	public Book(int id, String title) {
 		this.id = id;
 		this.title = title;
-		this.pictures = pictures;
 	}
 	
 	public int getId() {
@@ -32,20 +29,8 @@ public class Book {
 		this.title = title;
 	}
 	
-	public boolean isPictures() {
-		return pictures;
-	}
-	
-	public void setPictures(boolean pictures) {
-		this.pictures = pictures;
-	}
-	
 	@Override
 	public String toString() {
-		return "Book{" +
-				"id=" + id +
-				", title='" + title + '\'' +
-				", pictures=" + pictures +
-				'}';
+		return "Book{" + "id=" + id + ", title='" + title + "}";
 	}
 }
